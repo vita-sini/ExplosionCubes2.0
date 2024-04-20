@@ -20,9 +20,7 @@ public class Creature : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        List<Rigidbody> explodableObjects = CreateObjects();
-
-        if (explodableObjects.Count > 0)
+        if (CreateObjects().Count > 0)
             Detonate(CreateObjects());
         else
             TriggerExplosion();
